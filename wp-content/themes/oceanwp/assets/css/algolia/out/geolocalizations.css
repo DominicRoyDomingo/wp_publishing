@@ -1,0 +1,130 @@
+html {
+  scroll-behavior: smooth;
+}
+.page-header{
+  display: none;
+ }
+#geolocalization {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+}
+#geolocalization__sidebar {
+  width: 90%;
+}
+#geolocalization__sidebar > aside {
+  width: 100%;
+  border-left-width: 1px;
+  border-style: solid;
+  border-color: #f1f1f1;
+}
+#geolocalization > div {
+  padding-right: 30px;
+}
+
+.content_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.geolocalized__content-image {
+  border-left: 3px solid #5aa8a0;
+  padding-left: 25px;
+}
+.geolocalized__content-description {
+  font-family: "Roboto", Sans-serif;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: #4054b2;
+}
+.geolocalized__content-description h1 {
+  font-family: "Roboto", Sans-serif;
+  border-left: 3px solid #5aa8a0;
+  color: #4054b2;
+  padding-left: 10px;
+  font-size: 36px;
+}
+.geolocalized__content-description h2 {
+  font-family: "Roboto", Sans-serif;
+  border-left: 3px solid #5aa8a0;
+  color: #4054b2;
+  padding-left: 10px;
+  font-size: 26px;
+  margin-top: 50px;
+}
+.geolocalized__content-description p {
+  font-family: "Roboto", Sans-serif;
+  margin: 0 0 20px;
+  color: #808080;
+}
+
+.phrase--buttons {
+  border-radius: 3.5px;
+  background-color: #4054b2;
+}
+.phrase--buttons:hover {
+  background-color: #ffff;
+  color: #4054b2;
+  border: 1px solid;
+  border-color: #4054b2;
+}
+.phrase-geolocalizations {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  padding-top: 150px;
+}
+.geolocalized--providers {
+  margin-top: 10px;
+  color: #4054b2;
+  border-bottom: 1px solid #5aa8a0;
+  border-right: 1px solid #5aa8a0 ;
+  border-top: 1px solid #5aa8a0;
+  border-left: 1px solid #5aa8a0;
+  padding: 10px 10px 10px 15px;
+  border-radius: 20px;
+}
+#providers{
+  margin-top: -10px;
+}
+.geolocalized--providers h4 {
+  font-family: "Roboto", Sans-serif;
+  padding-bottom: 0px;
+  color: #4054b2;
+}
+.geolocalized__info p {
+  font-family: "Roboto", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: -28px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+.single-line-provider{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.providers_name h4{
+  font-size: 20px;
+}
+.geolocalized__external-link {
+  padding-top: 0px;
+}
+.more--buttons {
+  background-color: white !important;
+  color: #4054b2 !important;
+}
+.show-more {
+  padding-top: 20px;
+  text-align: center;
+}
+@media(max-width: 600px) {
+  aside {
+    display: none;
+  }
+  
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "wp_publishing",
+  "version": "1.0.0",
+  "description": "Med4Care Themes and Plugins",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-providers": "sass --watch wp-content/themes/oceanwp/assets/css/algolia/sass/providers/app.scss:wp-content/themes/oceanwp/assets/css/algolia/out/providers.css",
+    "sass-prov-prod": "sass --style=compressed wp-content/themes/oceanwp/assets/css/algolia/sass/providers/app.scss:wp-content/themes/oceanwp/assets/css/algolia/out/providers.css",
+    "sass-courses": "sass --watch wp-content/themes/oceanwp/assets/css/algolia/sass/courses/app.scss:wp-content/themes/oceanwp/assets/css/algolia/out/courses.css",
+    "sass-courses-prod": "sass --style=compressed wp-content/themes/oceanwp/assets/css/algolia/sass/courses/app.scss:wp-content/themes/oceanwp/assets/css/algolia/out/courses.css",
+    "sass": "concurrently \"npm run sass-providers\" \"npm run sass-courses\"",
+    "sass-prod": "concurrently \"npm run sass-prov-prod\" \"npm run sass-courses-prod\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dominic-domingo@bitbucket.org/med4care/wp_publishing.git"
+  },
+  "author": "Dominic Domingo",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/med4care/wp_publishing#readme",
+  "dependencies": {
+    "concurrently": "^6.0.1"
+  }
+}

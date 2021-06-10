@@ -1,0 +1,53 @@
+/* this could be updated and reused by other categories */
+
+/* category */
+$category: "course";
+/* category */
+
+/* typography */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2)
+    format("woff2");
+}
+
+$global_font: "Roboto", sans-serif;
+$icon_font: "Font Awesome";
+/* typography */
+
+/* sets spacing */
+$root_spacing: 70px;
+$container_spacing: 10px;
+$item_spacing: 50px;
+$col_space: 1%;
+$row_space: 0.5%;
+$space_around: $col_space * 2;
+$accordion_spacing: 15px;
+/* sets spacing */
+
+/* sizes */
+$desktop_width: 75%;
+$edge_curvature: 3px;
+/* sizes */
+
+/* sets color */
+// accordion items color
+$base_color: #d9e4eb;
+// border on titles color
+$border_color: #5aa8a0;
+// general text color
+$text_color: #4054b2;
+// container color
+$background_color: #eaf0f4;
+// active text color
+$active_color: #5aa8a0;
+
+/* valid values are mono | comp | near | tri | manual */
+// mono - monochromatic
+// comp - complementary
+// tri - triad
+// over - manual override
+$color_scheme_type: "over";
+/* sets color */

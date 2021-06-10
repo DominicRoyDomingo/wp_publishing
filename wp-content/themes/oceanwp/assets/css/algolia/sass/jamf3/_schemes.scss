@@ -1,0 +1,91 @@
+/* sets color variants */
+@function triad-left($base) {
+  @if (red($base) > blue($base) and red($base) > green($base)) {
+    @return scale-color(scale-color($base, $green: +100%), $red: -100%);
+  } @else if (green($base) > red($base) and green($base) and blue($base)) {
+    @return scale-color(scale-color($base, $blue: +100%), $green: -100%);
+  } @else if (blue($base) > green($base) and blue($base) and red($base)) {
+    @return scale-color(scale-color($base, $red: +100%), $blue: -100%);
+  } @else {
+    @return $base;
+  }
+}
+
+@function triad-right($base) {
+  @if (red($base) > blue($base) and red($base) > green($base)) {
+    @return scale-color(scale-color($base, $blue: +100%), $red: -100%);
+  } @else if (green($base) > red($base) and green($base) and blue($base)) {
+    @return scale-color(scale-color($base, $red: +100%), $green: -100%);
+  } @else if (blue($base) > green($base) and blue($base) and red($base)) {
+    @return scale-color(scale-color($base, $green: +100%), $blue: -100%);
+  } @else {
+    @return $base;
+  }
+}
+
+@function setBorderColor($border_color: #5aa8a0, $color_scheme_type: "mono") {
+  @if ($color_scheme_type == "mono") {
+    @return scale-color($border_color, $lightness: +40%);
+  } @else if ($color_scheme_type == "comp") {
+    @return scale-color(complement($border_color), $lightness: +40%);
+  } @else if ($color_scheme_type == "tri") {
+    @return scale-color(triad-right($border_color), $lightness: +80%);
+  } @else if ($color_scheme_type == "over") {
+    @return $border_color;
+  } @else {
+    @if (lightness($border_color) > 75) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+}
+
+@function setTextColor($base_color: #4054b2, $color_scheme_type: "mono") {
+  @if ($color_scheme_type == "mono") {
+    @if (lightness($base_color) > 50) {
+      @return scale-color($base_color, $lightness: -60%);
+    } @else {
+      @return #fff;
+    }
+  } @else if ($color_scheme_type == "comp") {
+    @if (lightness($base_color) > 75) {
+      @return scale-color(complement($base_color), $lightness: -60%);
+    } @else {
+      @return #fff;
+    }
+  } @else if ($color_scheme_type == "tri") {
+    @if (lightness($base_color) > 50) {
+      @return scale-color(triad-left($base_color), $lightness: -60%);
+    } @else {
+      @return scale-color(triad-left($base_color), $lightness: +40%);
+    }
+  } @else if ($color_scheme_type == "over") {
+    @return $text_color;
+  } @else {
+    @if (lightness($base_color) > 75) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+}
+
+@function setBgColor($base_color: #8cacc3, $color_scheme_type: "mono") {
+  @if ($color_scheme_type == "mono") {
+    @return scale-color($base_color, $lightness: +40%);
+  } @else if ($color_scheme_type == "comp") {
+    @return scale-color(complement($base_color), $lightness: +40%);
+  } @else if ($color_scheme_type == "tri") {
+    @return scale-color(triad-right($base_color), $lightness: +80%);
+  } @else if ($color_scheme_type == "over") {
+    @return $background_color;
+  } @else {
+    @if (lightness($base_color) > 75) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+}
+/* sets color variants */

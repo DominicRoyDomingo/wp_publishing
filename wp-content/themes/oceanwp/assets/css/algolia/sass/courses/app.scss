@@ -1,0 +1,168 @@
+/*
+ * PROVIDERS
+ */
+@import "variables";
+@import "../jamf3/jamf3";
+
+.#{$category}-page {
+  & > * > .box {
+    max-width: 1140px;
+  }
+
+  & .box__container--course-info {
+    & > div:nth-child(2) ul li i {
+      width: 40px;
+    }
+  }
+
+  & > #course__body {
+    & .box {
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+    & .box:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  & .box__sidebar--courses {
+    & > div {
+      padding: 3% 1.5%;
+    }
+    & li {
+      font-weight: normal;
+      color: #333;
+
+      & > .course__sidebar-fix {
+        font-weight: bold;
+        font-size: 10px;
+        margin: 5px;
+        background-color: $text_color;
+        color: $background_color;
+        padding: 10px 5px;
+        border-radius: 50%;
+      }
+    }
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
+      & ul li {
+        list-style-type: none;
+        margin-left: -30px;
+
+        & img {
+          width: 35px;
+        }
+      }
+    }
+  }
+
+  & #course__footer {
+    & .box {
+      margin-top: 0;
+    }
+  }
+
+  /* typography */
+  font-family: $global_font;
+  font-size: 16px;
+  @include headings-sizes;
+  /* typography */
+
+  @include disable-select-drag;
+
+  img,
+  a {
+    @include disable-select-drag;
+  }
+
+  .gallery__container {
+    .gallery__container-row {
+      display: flex;
+      margin: 2% 0;
+
+      & > a {
+        justify-content: space-evenly;
+        margin: auto;
+
+        & > img {
+          margin: 0.5%;
+          object-fit: cover;
+          object-position: center;
+          height: 180px;
+          box-shadow: #e9e9e9 0px 0px 10px 0px;
+
+          &:hover {
+            @include smooth-transition;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* small laptops or tablets */
+@media only screen and (min-width: 960px) and (max-width: 1140px) {
+  #course__body .box {
+    width: 98%;
+  }
+}
+/* small laptops or tablets */
+
+@media only screen and (max-width: 959px) {
+  .#{$category}-page {
+    /* typography */
+    font-size: 18px;
+
+    @include headings-sizes;
+    /* typography */
+
+    #course__body {
+      & .box {
+        margin: 50px 10px;
+      }
+    }
+
+    .box__container--course-info {
+      flex-direction: column;
+      width: 96%;
+
+      & > .box__container--course-items {
+        width: 100%;
+      }
+    }
+
+    #course__body--other-info {
+      flex-direction: column;
+      padding: 0;
+
+      & .box__container--tab-container {
+        padding: 0;
+        width: 58%;
+      }
+    }
+
+    .box__container--tab-buttons {
+      flex-direction: column;
+      background: #e9e9e9;
+    }
+
+    .box__container--tab-button {
+      border: 1px solid #ccc;
+      border-bottom: none;
+    }
+
+    .box__sidebar--courses {
+      width: 94%;
+
+      & > .box__container--accordion {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*
+ * PROVIDERS
+ */

@@ -1,0 +1,7 @@
+@function flexWidthMobile($part) {
+  @return percentage($part/12) - $space_around * 5;
+}
+
+@function flexWidth($part) {
+  @return percentage($part/12) - $space_around;
+}

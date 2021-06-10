@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v70/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
+}
+.algolia--wrapper {
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 20px;
+  box-shadow: 1px 1px 5px #ccc;
+}
+.button--containers {
+  margin-top: 20px;
+}
+.plugin--buttons {
+  font-size: 14px;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 1px 3px 5px #ccc;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.plugin--buttons:hover {
+  cursor: pointer;
+}
+#new-providers--button {
+  background-image: -webkit-linear-gradient(left, #00c6ff, #0072ff);
+}
+#update-providers--button {
+  background-image: -webkit-linear-gradient(left, #0072ff, #00c6ff, #0072ff);
+}
+#reindex-providers--button {
+  background-image: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+#new-geo--button {
+  background-image: linear-gradient(to right, #28a745, #1a5b9e);
+}
+#new-actors--button {
+  background-image: -webkit-linear-gradient(left, #9aa3af, #176e86);
+}
+.algolia--buttons {
+  padding-bottom: 40px;
+}
+.dashicons-algolia-icon:before {
+  font-family: "Material Icons";
+  content: "\ef3c";
+  font-size: 20px;
+}
+.plugin--buttons:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+.algolia--buttons input {
+  width: 15%;
+  margin-right: 2%;
+  padding: 0.7%;
+}
+.algolia--icon {
+  font-family: "Material Icons";
+  font-size: 30px;
+}
+#providers--icon:before {
+  content: "\e548";
+}
+#geo--icon:before {
+  content: "\e1b7";
+}
+#actors--icon:before {
+  content: "\e87c";
+}
+#courses--icon:before {
+  content: "\e865";
+}
+#new-courses--button {
+  background-image: -webkit-linear-gradient(left, #a0b1c8, #5acbe9);
+}
+#update-courses--button {
+  background-image: -webkit-linear-gradient(left, #5acbe9, #a0b1c8, #5acbe9);
+}
+#reindex-courses--button {
+  background-image: -webkit-linear-gradient(left, #a0b1c8, #5acbe9);
+}
+.courses--btn {
+  color: #222;
+}
